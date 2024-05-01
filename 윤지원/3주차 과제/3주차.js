@@ -14,6 +14,6 @@ console.log(f); // 결과 3, 즉 뒤로 넘어감
 try {
   c.f();
 } catch (e) {
-  console.error(e); //c에러
+  console.error(e); //c에러 남
 }
 c?.f(); //문제없음 마찬가지로 c[0], c?.[0]도 문제없음
