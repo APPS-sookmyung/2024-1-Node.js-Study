@@ -9,7 +9,7 @@ const parseCookies = (cookie = "") =>
     .reduce((acc, [k, v]) => {
       acc[k.trim()] = decodeURIComponent(v);
       return acc;
-    }, {}); //따로 만들어둔 함수
+    }, {}); //따로 만들어 둔 함수
 
 http
   .createServer(async (req, res) => {

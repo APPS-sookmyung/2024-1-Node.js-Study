@@ -22,7 +22,7 @@ if (cluster.isMaster) {
       res.write("<h1>Hello Node!</h1>");
       res.end("<p>Hello Cluster!</p>");
       setTimeout(() => {
-        // 워커 존재를 확인하기 위해 1초마다 강제 종료
+        // 워커 존재를 확인하기 위해 1초마다 강제종료
         process.exit(1);
       }, 1000);
     })
