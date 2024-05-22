@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>이름과 생일 입력</title>
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+        const name = document.getElementById("username").value.trim();
+        const birthdate = document.getElementById("birthdate").value.trim();
+
+        // 입력값 유효성 검사
+        if (!name) {
+          return alert("이름을 입력하세요");
+        }
+        if (!/^\d{8}$/.test(birthdate)) {
+          return alert("생일을 YYYYMMDD 형식으로 입력하세요");
+        }
+
+        alert("입력이 성공적으로 완료되었습니다");
+        document.getElementById("username").value = "";
+        document.getElementById("birthdate").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>이름과 생일 입력하기</h1>
+    <form onsubmit="validateForm(event)">
+      <label for="username">이름:</label>
+      <input type="text" id="username" name="username" />
+      <br />
+      <label for="birthdate">생일(YYYYMMDD):</label>
+      <input type="text" id="birthdate" name="birthdate" />
+      <br />
+      <button type="submit">입력</button>
+    </form>
+  </body>
+</html>
