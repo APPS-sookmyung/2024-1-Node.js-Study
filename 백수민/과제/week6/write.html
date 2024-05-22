@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>RESTful SERVER</title>
+  <link rel="stylesheet" href="./restFront.css" />
+</head>
+<body>
+<nav>
+  <a href="/">Home</a>
+  <a href="/about">About</a>
+</nav>
+<div>
+  <h2>댓글 창</h2>
+  <p>댓글을 남겨주세요!</p>
+</div>
+<div>
+  <form id="form">
+    <input type="text" id="comment">
+    <button type="submit">등록</button>
+  </form>
+</div>
+<div id="list"></div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./restComment.js"></script>
+</body>
+</html>
