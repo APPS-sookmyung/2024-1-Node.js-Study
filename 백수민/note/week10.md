@@ -22,7 +22,7 @@
 - MySQL Community Downloads에서 MySQL 다운받기
 - MySQL workbench 다운받기
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img1.png" width="400" height="400"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img1.png" width="400" height="300"/>
 
 - MySQL terminal에서 접속하기
     - 터미널에서 MySQL이 설치된 경로로 이동: `$ cd /usr/local/mysql/bin`
@@ -30,7 +30,7 @@
     - password 입력
     - 종료하기: `$ exit`
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img2.png" width="400" height="400"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img2.png" width="550" height="280"/>
 
 ---
 
@@ -42,18 +42,18 @@
 
 2. 테이블 생성하기
 
-users table:
+- **users table:**
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img4.png" width="400" height="400"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img4.png" width="450" height="400"/>
 
-comments table:
+- **comments table:**
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img5.png" width="400" height="400"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img5.png" width="450" height="400"/>
 
 
-`mysql> SHOW TABLES`
+- `mysql> SHOW TABLES`
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img6.png" width="400" height="400"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img6.png" width="300" height="200"/>
 
 
 ---
@@ -73,14 +73,14 @@ comments table:
 |ZEROFILL|숫자의 자리 수가 고정된 경우 빈 자리에 0을 넣음|
 |DEFAULT now()|날짜 컬럼의 기본값을 현재 시간으로|
 
-primary key: id로 주로 설정
-Index commenter_idx: 테이블에서 자주 검색할만 것들에 INDEX를 걸어주면 검색 성능이 빨라진다 (ex: 댓글 이름)
-commenter 컬럼을 오름차순으로 indexing 하겠다
-constraint commenter : commenter에 제약을 두겠다
-FOREGIN KEY (외래키): 어떤 컬럼이 다른 테이블의 컬럼을 참조해서 그 값이 있어야만 등록하게 해줌
-CASCADE SEND NULL NO ACTION
-utf8mb4 이모티콘 포함
-UNIQUE INDEX 같이 사용하게 됨
+- primary key: id로 주로 설정
+- Index commenter_idx: 테이블에서 자주 검색할만 것들에 INDEX를 걸어주면 검색 성능이 빨라진다 (ex: 댓글 이름)
+- commenter 컬럼을 오름차순으로 indexing 하겠다
+- constraint commenter : commenter에 제약을 두겠다
+- FOREGIN KEY (외래키): 어떤 컬럼이 다른 테이블의 컬럼을 참조해서 그 값이 있어야만 등록하게 해줌
+- CASCADE SEND NULL NO ACTION
+- utf8mb4 이모티콘 포함
+- UNIQUE INDEX 같이 사용하게 됨
 
 ---
 
@@ -104,7 +104,7 @@ UNIQUE INDEX 같이 사용하게 됨
 - MySQL 외에도 다른 RDB (Maria, Postgre, SQLite, MSSQL)와도 호환됨
 - 초기 규모의 프로젝트에 사용 가능
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img3.png" width="400" height="400"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img3.png" width="580" height="250"/>
 
 ```JavaScript
 const Sequelize = require('sequelize'); // Sequelize: 객체 / 생성자
@@ -123,7 +123,7 @@ db.Sequelize = Sequelize;
 module.exports = db;
 ```
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img7.png" width="400" height="400"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week10/img7.png" width="400" height="230"/>
 
 ---
 
