@@ -196,5 +196,9 @@ User.destroy({
 
 ### 10. 관계 쿼리 알아보기
 
+
+--- 
+
 ### 11. 시퀄라이즈 실습하기
 
+- npx sequelize db:create (데이터베이스 sequelize 명령어로 만들기)
