@@ -2,10 +2,12 @@
 
 ### 1. 몽고디비 설치하기
 
-1. brew services start mongodb-community@7.0
-2. brew services restart mongodb-community@7.0
-3. brew services stop mongodb-community@7.0
-4. mongosh >> test
+**몽고디비 실행하기:**
+
+1. brew services start mongodb-community@7.0 - 실행
+2. brew services restart mongodb-community@7.0 - 재시작
+3. brew services stop mongodb-community@7.0 - 종료
+4. mongosh >> test - mongosh shell 열기
 5. mongosh admin -u root -p 비번 >> admin
 
 <img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img1.png" width="450" height="250"/>
