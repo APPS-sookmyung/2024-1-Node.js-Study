@@ -8,7 +8,7 @@
 4. mongosh >> test
 5. mongosh admin -u root -p 비번 >> admin
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img1.png" width="580" height="250"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img1.png" width="450" height="250"/>
 
 ---
 
@@ -20,7 +20,7 @@
 - `show dbs : 생성된 DB를 보여주는 명령어 `
 -  DB안에 실제 데이터를 적어도 하나라도 넣어야 제대로 생성됨
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img2.png" width="580" height="250"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img2.png" width="320" height="280"/>
 
 #### 컬렉션 (collection)
 - MySQL의 테이블에 해당됨
@@ -32,7 +32,7 @@
 
 ### 3. CRUD 작업하기
 
-CREATE
+**1. CREATE**
 - Compass보다 mongoDB 쿼리에 익숙에 지는 것이 좋음 (compass & workbench 자제)
 - **insertOne**: document 하나 추가하기
 - **insertMany**: document 여러개 추가하기
@@ -42,13 +42,11 @@ CREATE
     - MySQL의 primary key처럼 사용하면 됨 
     - MySQL에서는 foreign key의 유효성을 검증해 주지만 mongoDB는 안해준다 (그러므로 오타에 취약)
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img3.png" width="580" height="250"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img3.png" width="600" height="150"/>
 
 <img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img4.png" width="580" height="250"/>
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img5.png" width="580" height="250"/>
-
-READ
+**2. READ**
 - `db.users.find({}); find로 모두 조회`
 - `db.users.findOne({}); findOne으로 하나만 조회`
 - 두번째 인수로 조회할 필드 선택 가능: 1은 추가, 0은 제외
@@ -57,17 +55,17 @@ READ
 - limit: 조회할 다큐먼트 개수 제한 (.limt(1))
 - skip: 건너뛸 다큐너트 개수 제공 (.skip(1))
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img6.png" width="580" height="250"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img6.png" width="450" height="300"/>
 
-UPDATE
+**3. UPDATE**
 - 첫 번째 인수로 수정 대상을 찾고, 두 번째 인수로 수정 내용을 제공
 - 수정 내용에 $set을 붙이지 않으면 document 전체가 대체되므로 주의!!!
 - `db.users.updateOne({ name: 'James' }, { $set: { comment: '안녕하세요. 이 필드를 바꿔보겠습니다!' } });`
 - `updateOne(조건, 수정할 내용, { upsert: true })` : upsert: 조건에 맞는 document가 있으면 수정 없으면 하나 생성하라
 
-<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img7.png" width="580" height="250"/>
+<img src="https://raw.githubusercontent.com/suminb99/2024-1-Node.js-Study/main/%EB%B0%B1%EC%88%98%EB%AF%BC/image/week11/img7.png" width="630" height="120"/>
 
-DELETE
+**4. DELETE**
 - 첫 번째 인수로 삭제할 대상 조건 제공
 - .**deleteOne**({ name: 'James' });
 - 성공시 삭제된 개수가 반환됨
@@ -76,7 +74,7 @@ DELETE
 
 ### 4. 몽구스 사용하기
 
-Mongoose: 몽고디비 작업을 쉽게 할 수 있도록 도와주는 라이브러리
+**Mongoose**: 몽고디비 작업을 쉽게 할 수 있도록 도와주는 라이브러리
 - ODM (Object Document Mapping): 객체와 다큐먼트를 매핑 (1대1 짝지음)
 - 몽고디비에 없어 불편한 기능들을 몽구스가 보완
 - 테이블과 유사한 기능, JOIN 기능 추가
